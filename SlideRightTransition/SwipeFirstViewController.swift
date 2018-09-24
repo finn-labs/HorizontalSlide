@@ -7,11 +7,6 @@ class SwipeFirstViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let interactiveTransitionRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(interactiveTransitionRecognizerAction(sender:)))
-        interactiveTransitionRecognizer.edges = .right
-        view.addGestureRecognizer(interactiveTransitionRecognizer)
-
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Endre søk", style: .done, target: self, action: #selector(changeSearchTapped(sender:)))
     }
 
@@ -28,11 +23,5 @@ class SwipeFirstViewController: UIViewController {
         secondViewController.transitioningDelegate = transitionDelegate
         secondViewController.modalPresentationStyle = .fullScreen
         present(secondViewController, animated: true, completion: nil)
-    }
-
-    @objc func interactiveTransitionRecognizerAction(sender: UIScreenEdgePanGestureRecognizer) {
-        if sender.state == .began {
-            changeSearchTapped(sender: sender)
-        }
     }
 }

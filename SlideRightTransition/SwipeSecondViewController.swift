@@ -26,8 +26,7 @@ class SwipeSecondViewController: UIViewController {
             self.performSegue(withIdentifier: "BackToFirstViewController", sender: sender)
         }
     }
-    
-    
+
     //| ----------------------------------------------------------------------------
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "BackToFirstViewController" {
