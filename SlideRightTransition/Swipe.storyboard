@@ -43,22 +43,11 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAh-eI-szS">
-                                <rect key="frame" x="79" y="617" width="217" height="30"/>
-                                <state key="normal" title="Present With Custom Transition">
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="phA-vT-NZO" kind="presentation" identifier="CustomTransition" id="0km-sa-32K"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90146998359999997" green="0.90003083880000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="to2-UR-X5W" secondAttribute="centerX" id="1ww-KI-Jm4"/>
                             <constraint firstAttribute="centerY" secondItem="to2-UR-X5W" secondAttribute="centerY" id="43M-Jl-5eu"/>
-                            <constraint firstAttribute="centerX" secondItem="QAh-eI-szS" secondAttribute="centerX" id="FlN-MR-SRz"/>
-                            <constraint firstItem="kCm-Z4-6an" firstAttribute="top" secondItem="QAh-eI-szS" secondAttribute="bottom" constant="20" id="NPj-6n-SJ3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Swipe" id="Ts4-50-TCR"/>
