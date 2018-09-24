@@ -2,7 +2,9 @@ import UIKit
 
 class SwipeFirstViewController: UIViewController {
     lazy var customTransitionDelegate: SwipeTransitionDelegate = {
-        return SwipeTransitionDelegate()
+        let delegate = SwipeTransitionDelegate()
+        delegate.targetEdge = .right
+        return delegate
     }()
     
     override func viewDidLoad() {
@@ -13,9 +15,7 @@ class SwipeFirstViewController: UIViewController {
 
     @objc func changeSearchTapped(sender: Any?) {
         let secondViewController = SwipeSecondViewController()
-        let transitionDelegate = self.customTransitionDelegate
-        transitionDelegate.targetEdge = .right
-        secondViewController.transitioningDelegate = transitionDelegate
+        secondViewController.transitioningDelegate = self.customTransitionDelegate
         secondViewController.modalPresentationStyle = .fullScreen
         present(secondViewController, animated: true, completion: nil)
     }
