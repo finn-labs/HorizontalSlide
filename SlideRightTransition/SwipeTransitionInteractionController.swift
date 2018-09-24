@@ -1,8 +1,6 @@
 import UIKit
 
-@objc(SwipeTransitionInteractionController)
 class SwipeTransitionInteractionController: UIPercentDrivenInteractiveTransition {
-    
     weak var transitionContext: UIViewControllerContextTransitioning?
     let gestureRecognizer: UIScreenEdgePanGestureRecognizer
     let edge: UIRectEdge

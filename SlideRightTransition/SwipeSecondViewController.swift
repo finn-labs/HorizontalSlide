@@ -1,6 +1,5 @@
 import UIKit
 
-@objc(SwipeSecondViewController)
 class SwipeSecondViewController: UIViewController {
     
     

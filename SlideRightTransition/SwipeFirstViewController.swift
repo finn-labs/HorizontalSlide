@@ -1,6 +1,5 @@
 import UIKit
 
-@objc(SwipeFirstViewController)
 class SwipeFirstViewController: UIViewController {
     
     private var _customTransitionDelegate: SwipeTransitionDelegate?

@@ -1,6 +1,5 @@
 import UIKit
 
-@objc(SwipeTransitionAnimator)
 class SwipeTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
     var targetEdge: UIRectEdge

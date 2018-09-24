@@ -1,6 +1,5 @@
 import UIKit
 
-@objc(SwipeTransitionDelegate)
 class SwipeTransitionDelegate: NSObject, UIViewControllerTransitioningDelegate {
     
     //! If this transition will be interactive, this property is set to the
