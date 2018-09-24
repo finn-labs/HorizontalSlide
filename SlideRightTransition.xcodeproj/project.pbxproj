@@ -12,6 +12,7 @@
 		14BEFCBA2158F4970087624E /* SwipeTransitionInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BEFCB42158F4970087624E /* SwipeTransitionInteractionController.swift */; };
 		14BEFCBC2158F4970087624E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BEFCB62158F4970087624E /* MainViewController.swift */; };
 		14BEFCBD2158F4970087624E /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BEFCB72158F4970087624E /* FiltersViewController.swift */; };
+		14EB39592159094D007707C0 /* SwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB39582159094D007707C0 /* SwipeController.swift */; };
 		D06B69231A5B05A10009167D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06B69221A5B05A10009167D /* Images.xcassets */; };
 		D06B69261A5B05A10009167D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06B69241A5B05A10009167D /* LaunchScreen.xib */; };
 		D7404C6F1C8334CB000E611C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7404C6E1C8334CB000E611C /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 		14BEFCB42158F4970087624E /* SwipeTransitionInteractionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTransitionInteractionController.swift; sourceTree = "<group>"; };
 		14BEFCB62158F4970087624E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		14BEFCB72158F4970087624E /* FiltersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
+		14EB39582159094D007707C0 /* SwipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeController.swift; sourceTree = "<group>"; };
 		D012017E1B7E8E5100364AFB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D06B690F1A5B05A10009167D /* SlideRightTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideRightTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06B69131A5B05A10009167D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				14BEFCB72158F4970087624E /* FiltersViewController.swift */,
 				14BEFCB22158F4970087624E /* SwipeTransitionAnimator.swift */,
 				14BEFCB32158F4970087624E /* SwipeTransitionDelegate.swift */,
+				14EB39582159094D007707C0 /* SwipeController.swift */,
 				14BEFCB42158F4970087624E /* SwipeTransitionInteractionController.swift */,
 				D06B69121A5B05A10009167D /* Supporting Files */,
 			);
@@ -157,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14BEFCB82158F4970087624E /* SwipeTransitionAnimator.swift in Sources */,
+				14EB39592159094D007707C0 /* SwipeController.swift in Sources */,
 				14BEFCB92158F4970087624E /* SwipeTransitionDelegate.swift in Sources */,
 				14BEFCBA2158F4970087624E /* SwipeTransitionInteractionController.swift in Sources */,
 				14BEFCBC2158F4970087624E /* MainViewController.swift in Sources */,

@@ -7,7 +7,14 @@ class SwipeTransitionDelegate: NSObject, UIViewControllerTransitioningDelegate {
     var gestureRecognizer: UIScreenEdgePanGestureRecognizer?
     
     var targetEdge: UIRectEdge = []
-    
+    var direction = PresentationDirection.left
+
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        let presentationController = SwipeController(presentedViewController: presented, presenting: presenting, direction: direction)
+        presentationController.delegate = self
+        return presentationController
+    }
+
     //| ----------------------------------------------------------------------------
     //  The system calls this method on the presented view controller's
     //  transitioningDelegate to retrieve the animator object used for animating
@@ -71,4 +78,20 @@ class SwipeTransitionDelegate: NSObject, UIViewControllerTransitioningDelegate {
         }
     }
     
+}
+
+// MARK: - UIAdaptivePresentationControllerDelegate
+
+extension SwipeTransitionDelegate: UIAdaptivePresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+        if traitCollection.verticalSizeClass == .compact {
+            return .overFullScreen
+        } else {
+            return .none
+        }
+    }
+
+    func presentationController(_ controller: UIPresentationController, viewControllerForAdaptivePresentationStyle style: UIModalPresentationStyle) -> UIViewController? {
+        return nil
+    }
 }
