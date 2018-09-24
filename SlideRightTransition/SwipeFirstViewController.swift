@@ -1,35 +1,24 @@
 import UIKit
 
 class SwipeFirstViewController: UIViewController {
+    lazy var customTransitionDelegate: SwipeTransitionDelegate = {
+        return SwipeTransitionDelegate()
+    }()
     
-    private var _customTransitionDelegate: SwipeTransitionDelegate?
-    
-    
-    //| ----------------------------------------------------------------------------
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // This gesture recognizer could be defined in the storyboard but is
-        // instead created in code for clarity.
-        let interactiveTransitionRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(self.interactiveTransitionRecognizerAction(_:)))
+        let interactiveTransitionRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(interactiveTransitionRecognizerAction(_:)))
         interactiveTransitionRecognizer.edges = .right
         self.view.addGestureRecognizer(interactiveTransitionRecognizer)
     }
     
-    
-    //| ----------------------------------------------------------------------------
-    //! Action method for the interactiveTransitionRecognizer.
-    //
-    @IBAction func interactiveTransitionRecognizerAction(_ sender: UIScreenEdgePanGestureRecognizer) {
+    @objc func interactiveTransitionRecognizerAction(_ sender: UIScreenEdgePanGestureRecognizer) {
         if sender.state == .began {
             self.performSegue(withIdentifier: "CustomTransition", sender: sender)
         }
-        
-        // Remaining cases are handled by the
-        // SwipeTransitionInteractionController.
     }
-    
-    
+
     //| ----------------------------------------------------------------------------
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "CustomTransition" {
@@ -75,23 +64,6 @@ class SwipeFirstViewController: UIViewController {
         }
     }
     
-    
-    //| ----------------------------------------------------------------------------
-    //  Custom implementation of the getter for the customTransitionDelegate
-    //  property.  Lazily creates an instance of SwipeTransitionDelegate.
-    //
-    var customTransitionDelegate: SwipeTransitionDelegate {
-        get {
-            if _customTransitionDelegate == nil {
-                _customTransitionDelegate = SwipeTransitionDelegate()
-            }
-            
-            return _customTransitionDelegate!
-        }
-        set {
-            _customTransitionDelegate = newValue
-        }
-    }
     //
     //MARK: -
     //MARK: Unwind Actions
