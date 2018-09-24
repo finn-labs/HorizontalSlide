@@ -10,15 +10,14 @@ class SwipeSecondViewController: UIViewController {
         interactiveTransitionRecognizer.edges = .left
         view.addGestureRecognizer(interactiveTransitionRecognizer)
     }
-    
-    
-    @IBAction func interactiveTransitionRecognizerAction(sender: UIScreenEdgePanGestureRecognizer) {
+
+    @objc func interactiveTransitionRecognizerAction(sender: UIScreenEdgePanGestureRecognizer) {
         if sender.state == .began {
             if let transitionDelegate = transitioningDelegate as? SwipeTransitionDelegate {
                 transitionDelegate.gestureRecognizer = sender
                 transitionDelegate.targetEdge = .left
                 dismiss(animated: true, completion: nil)
+            }
         }
-    }
     }
 }
