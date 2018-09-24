@@ -10,7 +10,6 @@
 		14BEFCB82158F4970087624E /* SwipeTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BEFCB22158F4970087624E /* SwipeTransitionAnimator.swift */; };
 		14BEFCB92158F4970087624E /* SwipeTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BEFCB32158F4970087624E /* SwipeTransitionDelegate.swift */; };
 		14BEFCBA2158F4970087624E /* SwipeTransitionInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BEFCB42158F4970087624E /* SwipeTransitionInteractionController.swift */; };
-		14BEFCBB2158F4970087624E /* Swipe.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14BEFCB52158F4970087624E /* Swipe.storyboard */; };
 		14BEFCBC2158F4970087624E /* SwipeFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BEFCB62158F4970087624E /* SwipeFirstViewController.swift */; };
 		14BEFCBD2158F4970087624E /* SwipeSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BEFCB72158F4970087624E /* SwipeSecondViewController.swift */; };
 		D06B69231A5B05A10009167D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06B69221A5B05A10009167D /* Images.xcassets */; };
@@ -22,7 +21,6 @@
 		14BEFCB22158F4970087624E /* SwipeTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTransitionAnimator.swift; sourceTree = "<group>"; };
 		14BEFCB32158F4970087624E /* SwipeTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTransitionDelegate.swift; sourceTree = "<group>"; };
 		14BEFCB42158F4970087624E /* SwipeTransitionInteractionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTransitionInteractionController.swift; sourceTree = "<group>"; };
-		14BEFCB52158F4970087624E /* Swipe.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Swipe.storyboard; sourceTree = "<group>"; };
 		14BEFCB62158F4970087624E /* SwipeFirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeFirstViewController.swift; sourceTree = "<group>"; };
 		14BEFCB72158F4970087624E /* SwipeSecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeSecondViewController.swift; sourceTree = "<group>"; };
 		D012017E1B7E8E5100364AFB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -72,7 +70,6 @@
 				14BEFCB22158F4970087624E /* SwipeTransitionAnimator.swift */,
 				14BEFCB32158F4970087624E /* SwipeTransitionDelegate.swift */,
 				14BEFCB42158F4970087624E /* SwipeTransitionInteractionController.swift */,
-				14BEFCB52158F4970087624E /* Swipe.storyboard */,
 				D06B69121A5B05A10009167D /* Supporting Files */,
 			);
 			path = SlideRightTransition;
@@ -149,7 +146,6 @@
 			files = (
 				D06B69261A5B05A10009167D /* LaunchScreen.xib in Resources */,
 				D06B69231A5B05A10009167D /* Images.xcassets in Resources */,
-				14BEFCBB2158F4970087624E /* Swipe.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
