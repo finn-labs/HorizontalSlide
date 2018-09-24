@@ -1,8 +1,8 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    lazy var customTransitionDelegate: SlideInPresentationHelper = {
-        let delegate = SlideInPresentationHelper()
+    lazy var customTransitionDelegate: SlideInHelper = {
+        let delegate = SlideInHelper()
         return delegate
     }()
     

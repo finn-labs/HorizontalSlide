@@ -7,7 +7,7 @@ enum PresentationDirection {
     case bottom
 }
 
-final class SlideInPresentationHelper: NSObject {
+final class SlideInHelper: NSObject {
     
     // MARK: - Properties
     var direction = PresentationDirection.left
@@ -15,25 +15,25 @@ final class SlideInPresentationHelper: NSObject {
 }
 
 // MARK: - UIViewControllerTransitioningDelegate
-extension SlideInPresentationHelper: UIViewControllerTransitioningDelegate {
+extension SlideInHelper: UIViewControllerTransitioningDelegate {
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
-        let presentationController = SlideInPresentationController(presentedViewController: presented, presenting: presenting, direction: direction)
+        let presentationController = SlideInController(presentedViewController: presented, presenting: presenting, direction: direction)
         presentationController.delegate = self
         return presentationController
     }
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return SlideInPresentationAnimator(direction: direction, isPresentation: true)
+        return SlideInAnimator(direction: direction, isPresentation: true)
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return SlideInPresentationAnimator(direction: direction, isPresentation: false)
+        return SlideInAnimator(direction: direction, isPresentation: false)
     }
 }
 
 // MARK: - UIAdaptivePresentationControllerDelegate
-extension SlideInPresentationHelper: UIAdaptivePresentationControllerDelegate {
+extension SlideInHelper: UIAdaptivePresentationControllerDelegate {
     
     func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
         if traitCollection.verticalSizeClass == .compact && disableCompactHeight {
