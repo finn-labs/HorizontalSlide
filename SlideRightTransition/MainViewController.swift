@@ -1,8 +1,8 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    lazy var customTransitionDelegate: SwipeTransitionDelegate = {
-        let delegate = SwipeTransitionDelegate()
+    lazy var customTransitionDelegate: SlideInPresentationHelper = {
+        let delegate = SlideInPresentationHelper()
         return delegate
     }()
     
@@ -13,9 +13,9 @@ class MainViewController: UIViewController {
     }
 
     @objc func changeSearchTapped(sender: Any?) {
-        let secondViewController = FiltersViewController()
+        let secondViewController = UINavigationController(rootViewController: FiltersViewController())
         secondViewController.transitioningDelegate = self.customTransitionDelegate
-        self.customTransitionDelegate.targetEdge = .right
+        self.customTransitionDelegate.direction = .right
         secondViewController.modalPresentationStyle = .custom
         present(secondViewController, animated: true, completion: nil)
     }
