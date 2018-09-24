@@ -1,6 +1,6 @@
 import UIKit
 
-class SwipeSecondViewController: UIViewController {
+class FiltersViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
