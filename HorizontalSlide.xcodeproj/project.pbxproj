@@ -7,24 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14BEFCB82158F4970087624E /* SwipeTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BEFCB22158F4970087624E /* SwipeTransitionAnimator.swift */; };
-		14BEFCB92158F4970087624E /* SwipeTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BEFCB32158F4970087624E /* SwipeTransitionDelegate.swift */; };
-		14BEFCBA2158F4970087624E /* SwipeTransitionInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BEFCB42158F4970087624E /* SwipeTransitionInteractionController.swift */; };
 		14BEFCBC2158F4970087624E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BEFCB62158F4970087624E /* MainViewController.swift */; };
 		14BEFCBD2158F4970087624E /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BEFCB72158F4970087624E /* FiltersViewController.swift */; };
+		4459B9C52165E4A400899DB0 /* HorizontalSlideTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4459B9C22165E4A400899DB0 /* HorizontalSlideTransitionDelegate.swift */; };
+		4459B9C62165E4A400899DB0 /* HorizontalSlideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4459B9C32165E4A400899DB0 /* HorizontalSlideController.swift */; };
+		4459B9C72165E4A400899DB0 /* HorizontalSlideTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4459B9C42165E4A400899DB0 /* HorizontalSlideTransitionAnimator.swift */; };
+		4459B9C92165E55C00899DB0 /* SwipeTransitionInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4459B9C82165E55C00899DB0 /* SwipeTransitionInteractionController.swift */; };
 		D06B69231A5B05A10009167D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06B69221A5B05A10009167D /* Images.xcassets */; };
 		D06B69261A5B05A10009167D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06B69241A5B05A10009167D /* LaunchScreen.xib */; };
 		D7404C6F1C8334CB000E611C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7404C6E1C8334CB000E611C /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		14BEFCB22158F4970087624E /* SwipeTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTransitionAnimator.swift; sourceTree = "<group>"; };
-		14BEFCB32158F4970087624E /* SwipeTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTransitionDelegate.swift; sourceTree = "<group>"; };
-		14BEFCB42158F4970087624E /* SwipeTransitionInteractionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTransitionInteractionController.swift; sourceTree = "<group>"; };
 		14BEFCB62158F4970087624E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		14BEFCB72158F4970087624E /* FiltersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
+		4459B9C22165E4A400899DB0 /* HorizontalSlideTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalSlideTransitionDelegate.swift; sourceTree = "<group>"; };
+		4459B9C32165E4A400899DB0 /* HorizontalSlideController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalSlideController.swift; sourceTree = "<group>"; };
+		4459B9C42165E4A400899DB0 /* HorizontalSlideTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalSlideTransitionAnimator.swift; sourceTree = "<group>"; };
+		4459B9C82165E55C00899DB0 /* SwipeTransitionInteractionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTransitionInteractionController.swift; sourceTree = "<group>"; };
 		D012017E1B7E8E5100364AFB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		D06B690F1A5B05A10009167D /* SlideRightTransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideRightTransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D06B690F1A5B05A10009167D /* HorizontalSlide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HorizontalSlide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06B69131A5B05A10009167D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D06B69221A5B05A10009167D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D06B69251A5B05A10009167D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -48,7 +50,7 @@
 			children = (
 				D7404C9A1C85C2FB000E611C /* LICENSE.txt */,
 				D012017E1B7E8E5100364AFB /* README.md */,
-				D06B69111A5B05A10009167D /* SlideRightTransition */,
+				D06B69111A5B05A10009167D /* HorizontalSlide */,
 				D06B69101A5B05A10009167D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,23 +58,24 @@
 		D06B69101A5B05A10009167D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D06B690F1A5B05A10009167D /* SlideRightTransition.app */,
+				D06B690F1A5B05A10009167D /* HorizontalSlide.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D06B69111A5B05A10009167D /* SlideRightTransition */ = {
+		D06B69111A5B05A10009167D /* HorizontalSlide */ = {
 			isa = PBXGroup;
 			children = (
 				D7404C6E1C8334CB000E611C /* AppDelegate.swift */,
 				14BEFCB62158F4970087624E /* MainViewController.swift */,
 				14BEFCB72158F4970087624E /* FiltersViewController.swift */,
-				14BEFCB22158F4970087624E /* SwipeTransitionAnimator.swift */,
-				14BEFCB32158F4970087624E /* SwipeTransitionDelegate.swift */,
-				14BEFCB42158F4970087624E /* SwipeTransitionInteractionController.swift */,
+				4459B9C32165E4A400899DB0 /* HorizontalSlideController.swift */,
+				4459B9C42165E4A400899DB0 /* HorizontalSlideTransitionAnimator.swift */,
+				4459B9C22165E4A400899DB0 /* HorizontalSlideTransitionDelegate.swift */,
+				4459B9C82165E55C00899DB0 /* SwipeTransitionInteractionController.swift */,
 				D06B69121A5B05A10009167D /* Supporting Files */,
 			);
-			path = SlideRightTransition;
+			path = HorizontalSlide;
 			sourceTree = "<group>";
 		};
 		D06B69121A5B05A10009167D /* Supporting Files */ = {
@@ -88,9 +91,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D06B690E1A5B05A10009167D /* SlideRightTransition */ = {
+		D06B690E1A5B05A10009167D /* HorizontalSlide */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D06B69351A5B05A20009167D /* Build configuration list for PBXNativeTarget "SlideRightTransition" */;
+			buildConfigurationList = D06B69351A5B05A20009167D /* Build configuration list for PBXNativeTarget "HorizontalSlide" */;
 			buildPhases = (
 				D06B690B1A5B05A10009167D /* Sources */,
 				D06B690C1A5B05A10009167D /* Frameworks */,
@@ -100,9 +103,9 @@
 			);
 			dependencies = (
 			);
-			name = SlideRightTransition;
-			productName = SlideRightTransition;
-			productReference = D06B690F1A5B05A10009167D /* SlideRightTransition.app */;
+			name = HorizontalSlide;
+			productName = HorizontalSlide;
+			productReference = D06B690F1A5B05A10009167D /* HorizontalSlide.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -121,7 +124,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D06B690A1A5B05A10009167D /* Build configuration list for PBXProject "SlideRightTransition" */;
+			buildConfigurationList = D06B690A1A5B05A10009167D /* Build configuration list for PBXProject "HorizontalSlide" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -134,7 +137,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D06B690E1A5B05A10009167D /* SlideRightTransition */,
+				D06B690E1A5B05A10009167D /* HorizontalSlide */,
 			);
 		};
 /* End PBXProject section */
@@ -156,12 +159,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14BEFCB82158F4970087624E /* SwipeTransitionAnimator.swift in Sources */,
-				14BEFCB92158F4970087624E /* SwipeTransitionDelegate.swift in Sources */,
-				14BEFCBA2158F4970087624E /* SwipeTransitionInteractionController.swift in Sources */,
 				14BEFCBC2158F4970087624E /* MainViewController.swift in Sources */,
 				D7404C6F1C8334CB000E611C /* AppDelegate.swift in Sources */,
 				14BEFCBD2158F4970087624E /* FiltersViewController.swift in Sources */,
+				4459B9C92165E55C00899DB0 /* SwipeTransitionInteractionController.swift in Sources */,
+				4459B9C62165E4A400899DB0 /* HorizontalSlideController.swift in Sources */,
+				4459B9C52165E4A400899DB0 /* HorizontalSlideTransitionDelegate.swift in Sources */,
+				4459B9C72165E4A400899DB0 /* HorizontalSlideTransitionAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,7 +233,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -281,7 +285,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -296,7 +300,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = SlideRightTransition/Info.plist;
+				INFOPLIST_FILE = HorizontalSlide/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -313,7 +318,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = SlideRightTransition/Info.plist;
+				INFOPLIST_FILE = HorizontalSlide/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -326,7 +332,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D06B690A1A5B05A10009167D /* Build configuration list for PBXProject "SlideRightTransition" */ = {
+		D06B690A1A5B05A10009167D /* Build configuration list for PBXProject "HorizontalSlide" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D06B69331A5B05A20009167D /* Debug */,
@@ -335,7 +341,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D06B69351A5B05A20009167D /* Build configuration list for PBXNativeTarget "SlideRightTransition" */ = {
+		D06B69351A5B05A20009167D /* Build configuration list for PBXNativeTarget "HorizontalSlide" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D06B69361A5B05A20009167D /* Debug */,

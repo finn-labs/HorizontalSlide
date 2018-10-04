@@ -1,1 +1,1 @@
-# SlideRightTransition
+# HorizontalSlide

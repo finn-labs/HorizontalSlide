@@ -1,9 +1,8 @@
 import UIKit
 
 class MainViewController: UIViewController {
-    lazy var customTransitionDelegate: SwipeTransitionDelegate = {
-        let delegate = SwipeTransitionDelegate()
-        delegate.targetEdge = .right
+    lazy var customTransitionDelegate: HorizontalSlideTransitionDelegate = {
+        let delegate = HorizontalSlideTransitionDelegate()
         return delegate
     }()
     
@@ -16,7 +15,8 @@ class MainViewController: UIViewController {
     @objc func changeSearchTapped(sender: Any?) {
         let secondViewController = FiltersViewController()
         secondViewController.transitioningDelegate = self.customTransitionDelegate
-        secondViewController.modalPresentationStyle = .fullScreen
+        self.customTransitionDelegate.gestureRecognizer = secondViewController.gestureRecognizer
+        secondViewController.modalPresentationStyle = .custom
         present(secondViewController, animated: true, completion: nil)
     }
 }
