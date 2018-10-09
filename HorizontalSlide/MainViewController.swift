@@ -25,8 +25,8 @@ class MainViewController: UIViewController {
 
     @objc func changeSearchTapped(sender: Any?) {
         let secondViewController = FiltersViewController()
-        secondViewController.transitioningDelegate = self.customTransitionDelegate
-        self.customTransitionDelegate.gestureRecognizer = sender as? UIScreenEdgePanGestureRecognizer
+        secondViewController.transitioningDelegate = customTransitionDelegate
+        customTransitionDelegate.gestureRecognizer = sender as? UIScreenEdgePanGestureRecognizer
         secondViewController.modalPresentationStyle = .custom
         present(secondViewController, animated: true, completion: nil)
     }

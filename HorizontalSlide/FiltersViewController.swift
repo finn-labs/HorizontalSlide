@@ -2,7 +2,7 @@ import UIKit
 
 class FiltersViewController: UIViewController {
     lazy var gestureRecognizer: UIPanGestureRecognizer = {
-        return UIPanGestureRecognizer(target: self, action: #selector(self.interactiveTransitionRecognizerAction(_:)))
+        return UIPanGestureRecognizer(target: self, action: #selector(interactiveTransitionRecognizerAction(_:)))
     }()
 
     override func viewDidLoad() {
@@ -15,7 +15,7 @@ class FiltersViewController: UIViewController {
 
     @objc func interactiveTransitionRecognizerAction(_ sender: UIPanGestureRecognizer) {
         if sender.state == .began {
-            if let transitionDelegate = self.transitioningDelegate as? HorizontalSlideTransitionDelegate {
+            if let transitionDelegate = transitioningDelegate as? HorizontalSlideTransitionDelegate {
                 transitionDelegate.gestureRecognizer = sender
                 dismiss(animated: true, completion: nil)
             }

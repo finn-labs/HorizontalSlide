@@ -3,18 +3,18 @@ import UIKit
 class SwipeTransitionInteractionController: UIPercentDrivenInteractiveTransition {
     weak var transitionContext: UIViewControllerContextTransitioning?
     let gestureRecognizer: UIPanGestureRecognizer
-    let edge: UIRectEdge
+    let isDismissal: Bool
 
-    init(gestureRecognizer: UIPanGestureRecognizer, edgeForDragging edge: UIRectEdge) {
+    init(gestureRecognizer: UIPanGestureRecognizer, isDismissal: Bool) {
         self.gestureRecognizer = gestureRecognizer
-        self.edge = edge
+        self.isDismissal = isDismissal
         super.init()
 
-        gestureRecognizer.addTarget(self, action: #selector(self.gestureRecognizeDidUpdate(_:)))
+        gestureRecognizer.addTarget(self, action: #selector(gestureRecognizeDidUpdate(_:)))
     }
 
     deinit {
-        self.gestureRecognizer.removeTarget(self, action: #selector(self.gestureRecognizeDidUpdate(_:)))
+        gestureRecognizer.removeTarget(self, action: #selector(gestureRecognizeDidUpdate(_:)))
     }
 
 
@@ -24,20 +24,15 @@ class SwipeTransitionInteractionController: UIPercentDrivenInteractiveTransition
     }
 
     private func percentForGesture(_ gesture: UIScreenEdgePanGestureRecognizer) -> CGFloat {
-        let transitionContainerView = self.transitionContext?.containerView
+        let transitionContainerView = transitionContext?.containerView
         let locationInSourceView = gesture.location(in: transitionContainerView)
-        let width = (transitionContainerView?.bounds ?? CGRect()).width
-        let height = (transitionContainerView?.bounds ?? CGRect()).height
-        if self.edge == .right {
-            return (width - locationInSourceView.x) / width
-        } else if self.edge == .left {
+        let width = transitionContainerView?.bounds.width ?? 0
+        guard width > 0 else { return 0 }
+
+        if isDismissal {
             return locationInSourceView.x / width
-        } else if self.edge == .bottom {
-            return (height - locationInSourceView.y) / height
-        } else if self.edge == .top {
-            return locationInSourceView.y / height
         } else {
-            return 0.0
+            return (width - locationInSourceView.x) / width
         }
     }
 
@@ -46,16 +41,16 @@ class SwipeTransitionInteractionController: UIPercentDrivenInteractiveTransition
         case .began:
             break
         case .changed:
-            self.update(self.percentForGesture(gestureRecognizer))
+            update(percentForGesture(gestureRecognizer))
             break
         case .ended:
-            if self.percentForGesture(gestureRecognizer) >= 0.5 {
-                self.finish()
+            if percentForGesture(gestureRecognizer) >= 0.5 {
+                finish()
             } else {
-                self.cancel()
+                cancel()
             }
         default:
-            self.cancel()
+            cancel()
         }
     }
 }
