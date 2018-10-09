@@ -12,8 +12,13 @@ class HorizontalSlideController: UIPresentationController {
         dimmingView.backgroundColor = UIColor(white: 0.0, alpha: 0.5)
         dimmingView.alpha = 0.0
 
-        let recognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(recognizer:)))
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(handleDismissGesture))
         dimmingView.addGestureRecognizer(recognizer)
+
+        let swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(handleDismissGesture))
+        swipeGestureRecognizer.direction = .right
+        dimmingView.addGestureRecognizer(swipeGestureRecognizer)
+
         return dimmingView
     }()
 
@@ -67,7 +72,7 @@ class HorizontalSlideController: UIPresentationController {
     }
 
     // MARK: - Private
-    @objc private func handleTap(recognizer: UITapGestureRecognizer) {
+    @objc private func handleDismissGesture() {
         presentingViewController.dismiss(animated: true)
     }
 }

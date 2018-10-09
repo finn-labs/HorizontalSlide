@@ -13,11 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
-        if #available(iOS 8.0, *) {
-            return .all
-        } else {
-            return .portrait
-        }
-    }
-    
+        return .all
+    }    
 }
