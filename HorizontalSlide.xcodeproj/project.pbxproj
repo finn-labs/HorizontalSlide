@@ -12,7 +12,6 @@
 		4459B9C52165E4A400899DB0 /* HorizontalSlideTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4459B9C22165E4A400899DB0 /* HorizontalSlideTransitionDelegate.swift */; };
 		4459B9C62165E4A400899DB0 /* HorizontalSlideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4459B9C32165E4A400899DB0 /* HorizontalSlideController.swift */; };
 		4459B9C72165E4A400899DB0 /* HorizontalSlideTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4459B9C42165E4A400899DB0 /* HorizontalSlideTransitionAnimator.swift */; };
-		4459B9C92165E55C00899DB0 /* SwipeTransitionInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4459B9C82165E55C00899DB0 /* SwipeTransitionInteractionController.swift */; };
 		D06B69231A5B05A10009167D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06B69221A5B05A10009167D /* Images.xcassets */; };
 		D06B69261A5B05A10009167D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D06B69241A5B05A10009167D /* LaunchScreen.xib */; };
 		D7404C6F1C8334CB000E611C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7404C6E1C8334CB000E611C /* AppDelegate.swift */; };
@@ -24,7 +23,6 @@
 		4459B9C22165E4A400899DB0 /* HorizontalSlideTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalSlideTransitionDelegate.swift; sourceTree = "<group>"; };
 		4459B9C32165E4A400899DB0 /* HorizontalSlideController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalSlideController.swift; sourceTree = "<group>"; };
 		4459B9C42165E4A400899DB0 /* HorizontalSlideTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalSlideTransitionAnimator.swift; sourceTree = "<group>"; };
-		4459B9C82165E55C00899DB0 /* SwipeTransitionInteractionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeTransitionInteractionController.swift; sourceTree = "<group>"; };
 		D012017E1B7E8E5100364AFB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D06B690F1A5B05A10009167D /* HorizontalSlide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HorizontalSlide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D06B69131A5B05A10009167D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,7 +70,6 @@
 				4459B9C22165E4A400899DB0 /* HorizontalSlideTransitionDelegate.swift */,
 				4459B9C32165E4A400899DB0 /* HorizontalSlideController.swift */,
 				4459B9C42165E4A400899DB0 /* HorizontalSlideTransitionAnimator.swift */,
-				4459B9C82165E55C00899DB0 /* SwipeTransitionInteractionController.swift */,
 				D06B69121A5B05A10009167D /* Supporting Files */,
 			);
 			path = HorizontalSlide;
@@ -120,6 +117,7 @@
 				TargetAttributes = {
 					D06B690E1A5B05A10009167D = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = D34XZHQLE3;
 						LastSwiftMigration = 0930;
 					};
 				};
@@ -162,7 +160,6 @@
 				14BEFCBC2158F4970087624E /* MainViewController.swift in Sources */,
 				D7404C6F1C8334CB000E611C /* AppDelegate.swift in Sources */,
 				14BEFCBD2158F4970087624E /* FiltersViewController.swift in Sources */,
-				4459B9C92165E55C00899DB0 /* SwipeTransitionInteractionController.swift in Sources */,
 				4459B9C62165E4A400899DB0 /* HorizontalSlideController.swift in Sources */,
 				4459B9C52165E4A400899DB0 /* HorizontalSlideTransitionDelegate.swift in Sources */,
 				4459B9C72165E4A400899DB0 /* HorizontalSlideTransitionAnimator.swift in Sources */,
@@ -300,6 +297,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = D34XZHQLE3;
 				INFOPLIST_FILE = HorizontalSlide/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -318,6 +316,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = D34XZHQLE3;
 				INFOPLIST_FILE = HorizontalSlide/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

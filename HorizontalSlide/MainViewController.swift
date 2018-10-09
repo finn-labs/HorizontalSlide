@@ -10,23 +10,21 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
 
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Endre søk", style: .done, target: self, action: #selector(changeSearchTapped(sender:)))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Endre søk", style: .done, target: self, action: #selector(changeSearchTapped))
 
-        let interactiveTransitionRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(interactiveTransitionRecognizerAction(_:)))
-        interactiveTransitionRecognizer.edges = .right
-        view.addGestureRecognizer(interactiveTransitionRecognizer)
+        let swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipeGestureRecognizerAction))
+        swipeGestureRecognizer.direction = .left
+        view.addGestureRecognizer(swipeGestureRecognizer)
+        view.isUserInteractionEnabled = true
     }
 
-    @objc func interactiveTransitionRecognizerAction(_ sender: UIScreenEdgePanGestureRecognizer) {
-        if sender.state == .began {
-            changeSearchTapped(sender: sender)
-        }
+    @objc func swipeGestureRecognizerAction() {
+        changeSearchTapped()
     }
 
-    @objc func changeSearchTapped(sender: Any?) {
+    @objc func changeSearchTapped() {
         let secondViewController = FiltersViewController()
         secondViewController.transitioningDelegate = customTransitionDelegate
-        customTransitionDelegate.gestureRecognizer = sender as? UIScreenEdgePanGestureRecognizer
         secondViewController.modalPresentationStyle = .custom
         present(secondViewController, animated: true, completion: nil)
     }
