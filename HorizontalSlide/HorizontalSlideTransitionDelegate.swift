@@ -18,7 +18,7 @@ public class HorizontalSlideTransitionDelegate: NSObject, UIViewControllerTransi
 
     public func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         if let gestureRecognizer = gestureRecognizer {
-            return SwipeTransitionInteractionController(gestureRecognizer: gestureRecognizer, isDismissal: false)
+            return SwipeTransitionInteractionController(gestureRecognizer: gestureRecognizer)
         } else {
             return nil
         }
@@ -26,7 +26,7 @@ public class HorizontalSlideTransitionDelegate: NSObject, UIViewControllerTransi
 
     public func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         if let gestureRecognizer = gestureRecognizer {
-            return SwipeTransitionInteractionController(gestureRecognizer: gestureRecognizer, isDismissal: true)
+            return SwipeTransitionInteractionController(gestureRecognizer: gestureRecognizer)
         } else {
             return nil
         }

@@ -3,11 +3,9 @@ import UIKit
 class SwipeTransitionInteractionController: UIPercentDrivenInteractiveTransition {
     weak var transitionContext: UIViewControllerContextTransitioning?
     let gestureRecognizer: UIPanGestureRecognizer
-    let isDismissal: Bool
 
-    init(gestureRecognizer: UIPanGestureRecognizer, isDismissal: Bool) {
+    init(gestureRecognizer: UIPanGestureRecognizer) {
         self.gestureRecognizer = gestureRecognizer
-        self.isDismissal = isDismissal
         super.init()
 
         gestureRecognizer.addTarget(self, action: #selector(gestureRecognizeDidUpdate(_:)))
@@ -17,23 +15,34 @@ class SwipeTransitionInteractionController: UIPercentDrivenInteractiveTransition
         gestureRecognizer.removeTarget(self, action: #selector(gestureRecognizeDidUpdate(_:)))
     }
 
-
     override func startInteractiveTransition(_ transitionContext: UIViewControllerContextTransitioning) {
         self.transitionContext = transitionContext
         super.startInteractiveTransition(transitionContext)
     }
 
     private func percentForGesture(_ gesture: UIScreenEdgePanGestureRecognizer) -> CGFloat {
-        let transitionContainerView = transitionContext?.containerView
+        guard let fromViewController = transitionContext?.viewController(forKey: .from) else { return 0 }
+        guard let toViewController = transitionContext?.viewController(forKey: .to) else { return  0 }
+        let isPresenting = toViewController.presentingViewController === fromViewController
+
+        let transitionContainerView: UIView?
+        if isPresenting {
+            transitionContainerView = transitionContext?.containerView
+        } else {
+            transitionContainerView = transitionContext?.viewController(forKey: .to)?.view
+        }
+
         let locationInSourceView = gesture.location(in: transitionContainerView)
         let width = transitionContainerView?.bounds.width ?? 0
         guard width > 0 else { return 0 }
-
-        if isDismissal {
-            return locationInSourceView.x / width
+        let percentage: CGFloat
+        if isPresenting {
+            percentage = (width - locationInSourceView.x) / width
         } else {
-            return (width - locationInSourceView.x) / width
+            percentage = locationInSourceView.x / width
         }
+
+        return percentage
     }
 
     @objc func gestureRecognizeDidUpdate(_ gestureRecognizer: UIScreenEdgePanGestureRecognizer) {
@@ -42,7 +51,6 @@ class SwipeTransitionInteractionController: UIPercentDrivenInteractiveTransition
             break
         case .changed:
             update(percentForGesture(gestureRecognizer))
-            break
         case .ended:
             if percentForGesture(gestureRecognizer) >= 0.5 {
                 finish()
