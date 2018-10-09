@@ -25,13 +25,7 @@ class SwipeTransitionInteractionController: UIPercentDrivenInteractiveTransition
         guard let toViewController = transitionContext?.viewController(forKey: .to) else { return  0 }
         let isPresenting = toViewController.presentingViewController === fromViewController
 
-        let transitionContainerView: UIView?
-        if isPresenting {
-            transitionContainerView = transitionContext?.containerView
-        } else {
-            transitionContainerView = transitionContext?.viewController(forKey: .to)?.view
-        }
-
+        let transitionContainerView = isPresenting ? transitionContext?.containerView : toViewController.view
         let locationInSourceView = gesture.location(in: transitionContainerView)
         let width = transitionContainerView?.bounds.width ?? 0
         guard width > 0 else { return 0 }
@@ -41,6 +35,8 @@ class SwipeTransitionInteractionController: UIPercentDrivenInteractiveTransition
         } else {
             percentage = locationInSourceView.x / width
         }
+
+        print("percentage: \(percentage)")
 
         return percentage
     }
@@ -52,6 +48,7 @@ class SwipeTransitionInteractionController: UIPercentDrivenInteractiveTransition
         case .changed:
             update(percentForGesture(gestureRecognizer))
         case .ended:
+            update(percentForGesture(gestureRecognizer))
             if percentForGesture(gestureRecognizer) >= 0.5 {
                 finish()
             } else {
