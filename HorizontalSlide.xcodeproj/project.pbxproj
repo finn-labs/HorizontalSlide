@@ -69,9 +69,9 @@
 				D7404C6E1C8334CB000E611C /* AppDelegate.swift */,
 				14BEFCB62158F4970087624E /* MainViewController.swift */,
 				14BEFCB72158F4970087624E /* FiltersViewController.swift */,
+				4459B9C22165E4A400899DB0 /* HorizontalSlideTransitionDelegate.swift */,
 				4459B9C32165E4A400899DB0 /* HorizontalSlideController.swift */,
 				4459B9C42165E4A400899DB0 /* HorizontalSlideTransitionAnimator.swift */,
-				4459B9C22165E4A400899DB0 /* HorizontalSlideTransitionDelegate.swift */,
 				4459B9C82165E55C00899DB0 /* SwipeTransitionInteractionController.swift */,
 				D06B69121A5B05A10009167D /* Supporting Files */,
 			);

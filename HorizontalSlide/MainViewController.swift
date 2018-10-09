@@ -8,14 +8,25 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .green
+        view.backgroundColor = .white
+
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Endre søk", style: .done, target: self, action: #selector(changeSearchTapped(sender:)))
+
+        let interactiveTransitionRecognizer = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(interactiveTransitionRecognizerAction(_:)))
+        interactiveTransitionRecognizer.edges = .right
+        view.addGestureRecognizer(interactiveTransitionRecognizer)
+    }
+
+    @objc func interactiveTransitionRecognizerAction(_ sender: UIScreenEdgePanGestureRecognizer) {
+        if sender.state == .began {
+            changeSearchTapped(sender: sender)
+        }
     }
 
     @objc func changeSearchTapped(sender: Any?) {
         let secondViewController = FiltersViewController()
         secondViewController.transitioningDelegate = self.customTransitionDelegate
-        self.customTransitionDelegate.gestureRecognizer = secondViewController.gestureRecognizer
+        self.customTransitionDelegate.gestureRecognizer = sender as? UIScreenEdgePanGestureRecognizer
         secondViewController.modalPresentationStyle = .custom
         present(secondViewController, animated: true, completion: nil)
     }
